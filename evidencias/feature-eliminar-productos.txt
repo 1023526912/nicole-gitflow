@@ -1,0 +1,1 @@
+Feature eliminar-productos implementada en index.html.
