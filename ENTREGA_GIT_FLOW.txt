@@ -1,0 +1,35 @@
+ENTREGA GIT FLOW - NICOLE
+=========================
+
+Proyecto personalizado con colores pastel y contenido diferente.
+
+Ramas incluidas:
+- main
+- develop
+- feature/pastel-profile
+- release/v1.0.0
+- hotfix/form-message
+
+Tags:
+- v1.0.0
+- v1.0.1
+
+Para subirlo a TU repositorio de GitHub:
+
+1. Crea un repositorio vacío en GitHub.
+2. Abre una terminal dentro de esta carpeta.
+3. Si ya existe un origin que no es tuyo, elimínalo:
+   git remote remove origin
+4. Agrega tu URL:
+   git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+5. Sube todas las ramas:
+   git push -u origin main
+   git push -u origin develop
+   git push -u origin feature/pastel-profile
+   git push -u origin release/v1.0.0
+   git push -u origin hotfix/form-message
+6. Sube las etiquetas:
+   git push origin --tags
+
+Comprobación:
+   git log --oneline --graph --decorate --all
