@@ -1,4 +1,5 @@
-* 451826d (HEAD -> develop) docs: agregar evidencias y defensa técnica
+* d462b34 (HEAD -> release/1.1.0, develop) docs: actualizar evidencias finales del flujo GitFlow
+* 451826d docs: agregar evidencias y defensa técnica
 *   2e4bf11 fix: resolver conflicto de integración en README
 |\  
 | * de997a0 (feature/descripcion-b) docs: actualizar descripción del proyecto versión B
