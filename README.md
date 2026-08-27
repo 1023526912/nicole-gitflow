@@ -1,6 +1,6 @@
 # Nicole Bloom - Sistema de Inventario Pastel
 
-Aplicación web académica para gestionar el inventario de una tienda ficticia de accesorios, papelería creativa, decoración y regalos. El proyecto fue desarrollado aplicando un flujo de trabajo basado en **GitFlow**.
+Aplicación web de inventario con estética pastel desarrollada como práctica de GitFlow. El proyecto fue desarrollado aplicando un flujo de trabajo basado en **GitFlow**.
 
 ## Características
 
