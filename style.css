@@ -151,3 +151,5 @@ footer {
     .cards, .contact-card { grid-template-columns: 1fr; }
     .hero { padding: 40px 20px; }
 }
+
+::selection { background: var(--pink-200); color: var(--ink); }
