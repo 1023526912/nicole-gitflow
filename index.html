@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole Bloom - Inventario Pastel</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--rosa:#f7c8d8;--rosa2:#f2aeca;--lila:#d9c8f5;--crema:#fff8f1;--menta:#caeadf;--texto:#5f4c59;--blanco:#fffefe;--borde:#ead9e2;--sombra:rgba(123,91,110,.15)}
+    body{font-family:Inter,"Segoe UI",sans-serif;background:linear-gradient(135deg,#fff1f6 0%,#f7f0ff 48%,#effbf7 100%);min-height:100vh;padding:24px;color:var(--texto)}
+    .container{max-width:1180px;margin:auto;background:rgba(255,255,255,.9);border:1px solid #f3dfe8;border-radius:24px;box-shadow:0 20px 60px var(--sombra);overflow:hidden}
+    header{background:linear-gradient(120deg,var(--rosa2),var(--lila));padding:36px;text-align:center;color:white}
+    header h1{font-size:2.5rem;margin-bottom:8px;letter-spacing:.5px}
+    header p{font-size:1.05rem;opacity:.95}
+    .main-content{padding:28px}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:22px}
+    .stat-card{padding:20px;border-radius:18px;text-align:center;border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 22px var(--sombra)}
+    .stat-card:nth-child(1){background:#ffe0ea}.stat-card:nth-child(2){background:#e7dcfb}.stat-card:nth-child(3){background:#daf3ea}
+    .stat-card h3{font-size:2rem;margin-bottom:4px}.stat-card p{font-weight:600}
+    .panel{background:var(--crema);border:1px solid var(--borde);border-radius:18px;padding:22px;margin-bottom:22px;border-left:6px solid var(--rosa2)}
+    .panel h2{margin-bottom:16px;color:#765e70}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .form-group{margin-bottom:12px}.form-group label{display:block;margin-bottom:6px;font-weight:700}
+    input,select{width:100%;padding:11px 12px;border:1.5px solid #e6cdd9;border-radius:12px;background:#fff;font-size:1rem;color:var(--texto)}
+    input:focus,select:focus{outline:none;border-color:var(--rosa2);box-shadow:0 0 0 3px rgba(242,174,202,.18)}
+    .btn{border:0;padding:11px 20px;border-radius:12px;font-weight:700;cursor:pointer;transition:.2s;color:#5d4754}.btn:hover{transform:translateY(-1px);filter:brightness(.98)}
+    .btn-success{background:#cbeedf}.btn-warning{background:#f7d5a9}.btn-danger{background:#f4bcc6}.btn-small{padding:7px 11px;font-size:.9rem}
+    table{width:100%;border-collapse:collapse;margin-top:18px;background:white;border-radius:14px;overflow:hidden}
+    thead{background:linear-gradient(120deg,#efb5cc,#d4c4f4);color:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #f0e4ea}
+    tbody tr:hover{background:#fff7fa}.actions{display:flex;gap:7px;flex-wrap:wrap}.precio{font-weight:700}
+    .empty-state{text-align:center;padding:40px;color:#9d8896}.empty-state .icon{font-size:3rem;margin-bottom:10px}
+    .alert{display:none;padding:12px 16px;border-radius:12px;margin-bottom:16px;font-weight:600}.alert-success{background:#ddf5ea}.alert-error{background:#ffe0e5}
+    footer{text-align:center;padding:20px;border-top:1px solid #f0e1e8;color:#8b7381;background:#fffafb}
+    @media(max-width:720px){body{padding:10px}.main-content{padding:16px}.form-grid{grid-template-columns:1fr}table{font-size:.88rem}th,td{padding:9px 7px}.container{border-radius:16px}}
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🌷 Nicole Bloom</h1>
+    <p>Sistema de inventario de accesorios y papelería creativa</p>
+  </header>
+  <main class="main-content">
+    <div id="alert" class="alert"></div>
+    <section class="stats">
+      <div class="stat-card"><h3 id="total-productos">0</h3><p>Productos registrados</p></div>
+      <div class="stat-card"><h3 id="total-stock">0</h3><p>Unidades disponibles</p></div>
+      <div class="stat-card"><h3 id="total-categorias">0</h3><p>Categorías activas</p></div>
+    </section>
+    <section class="panel">
+      <h2>Agregar producto</h2>
+      <form id="form-producto">
+        <div class="form-grid">
+          <div class="form-group"><label for="nombre">Nombre del producto</label><input id="nombre" required placeholder="Ej: Libreta floral A5"></div>
+          <div class="form-group"><label for="precio">Precio (COP)</label><input id="precio" type="number" min="0" step="100" required placeholder="Ej: 28500"></div>
+          <div class="form-group"><label for="categoria">Categoría</label><select id="categoria" required><option value="">Seleccionar categoría</option><option>Papelería</option><option>Accesorios</option><option>Organización</option><option>Regalos</option><option>Decoración</option><option>Otros</option></select></div>
+          <div class="form-group"><label for="stock">Cantidad en stock</label><input id="stock" type="number" min="0" required placeholder="Ej: 12"></div>
+        </div>
+        <button type="submit" class="btn btn-success">Agregar producto</button>
+      </form>
+    </section>
+    <section class="panel">
+      <h2>Catálogo Nicole Bloom</h2>
+      <div id="tabla-container"><div class="empty-state"><div class="icon">🎀</div><p>No hay productos registrados</p></div></div>
+    </section>
+  </main>
+  <footer>Nicole Bloom · Inventario Pastel v1.0.1 · Proyecto académico con GitFlow</footer>
+</div>
+<script>
+let productos=[];let editandoId=null;
+function crearProducto(e){e.preventDefault();const nombre=nombreEl().value.trim();const precio=parseFloat(precioEl().value);const categoria=categoriaEl().value;const stock=parseInt(stockEl().value);if(!nombre||Number.isNaN(precio)||!categoria||Number.isNaN(stock)||precio<0||stock<0){mostrarAlerta('Completa correctamente todos los campos.','error');return;}productos.push({id:Date.now(),nombre,precio,categoria,stock});document.getElementById('form-producto').reset();listarProductos();mostrarAlerta('Producto agregado correctamente.','success');}
+function nombreEl(){return document.getElementById('nombre')}function precioEl(){return document.getElementById('precio')}function categoriaEl(){return document.getElementById('categoria')}function stockEl(){return document.getElementById('stock')}
+function mostrarAlerta(mensaje,tipo){const a=document.getElementById('alert');a.textContent=mensaje;a.className=`alert alert-${tipo}`;a.style.display='block';setTimeout(()=>a.style.display='none',2600)}
+function listarProductos(){const c=document.getElementById('tabla-container');if(productos.length===0){c.innerHTML='<div class="empty-state"><div class="icon">🎀</div><p>No hay productos registrados</p></div>';actualizarEstadisticas();return;}let html='<table><thead><tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Categoría</th><th>Stock</th><th>Acciones</th></tr></thead><tbody>';productos.forEach(p=>{html+=`<tr><td>${p.id}</td><td>${p.nombre}</td><td class="precio">${formatearPrecio(p.precio)}</td><td>${p.categoria}</td><td>${p.stock}</td><td class="actions"><button class="btn btn-warning btn-small" onclick="iniciarEdicion(${p.id})">Editar</button><button class="btn btn-danger btn-small" onclick="eliminarProducto(${p.id})">Eliminar</button></td></tr>`});c.innerHTML=html+'</tbody></table>';actualizarEstadisticas();}
+function formatearPrecio(valor){return new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(valor)}
+function actualizarEstadisticas(){document.getElementById('total-productos').textContent=productos.length;document.getElementById('total-stock').textContent=productos.reduce((s,p)=>s+p.stock,0);document.getElementById('total-categorias').textContent=new Set(productos.map(p=>p.categoria)).size;}
+function iniciarEdicion(id){const p=productos.find(x=>x.id===id);if(!p)return;editandoId=id;nombreEl().value=p.nombre;precioEl().value=p.precio;categoriaEl().value=p.categoria;stockEl().value=p.stock;const b=document.querySelector('#form-producto button[type="submit"]');b.textContent='Actualizar producto';b.className='btn btn-warning';window.scrollTo({top:0,behavior:'smooth'});}
+function guardarEdicion(e){e.preventDefault();const nombre=nombreEl().value.trim(),precio=parseFloat(precioEl().value),categoria=categoriaEl().value,stock=parseInt(stockEl().value);if(!nombre||Number.isNaN(precio)||!categoria||Number.isNaN(stock)||precio<0||stock<0){mostrarAlerta('Completa correctamente todos los campos.','error');return;}const i=productos.findIndex(p=>p.id===editandoId);if(i!==-1)productos[i]={id:editandoId,nombre,precio,categoria,stock};cancelarEdicion();listarProductos();mostrarAlerta('Producto actualizado correctamente.','success');}
+function cancelarEdicion(){editandoId=null;document.getElementById('form-producto').reset();const b=document.querySelector('#form-producto button[type="submit"]');b.textContent='Agregar producto';b.className='btn btn-success';}
+function eliminarProducto(id){if(!confirm('¿Deseas eliminar este producto del inventario?'))return;productos=productos.filter(p=>p.id!==id);if(editandoId===id)cancelarEdicion();listarProductos();mostrarAlerta('Producto eliminado correctamente.','success');}
+document.addEventListener('DOMContentLoaded',()=>{document.getElementById('form-producto').addEventListener('submit',e=>editandoId!==null?guardarEdicion(e):crearProducto(e));listarProductos();});
+</script>
+</body>
+</html>
