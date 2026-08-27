@@ -14,6 +14,6 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById('email').value.trim();
     const favorite = document.getElementById('favorite').value;
 
-    formOutput.textContent = `¡Gracias, ${name}! Tu color elegido fue ${favorite}. Te escribiríamos a ${email}.`;
+    formOutput.textContent = `¡Gracias, ${name}! Tu color elegido fue ${favorite}. Correo registrado: ${email}.`;
     form.reset();
 });
