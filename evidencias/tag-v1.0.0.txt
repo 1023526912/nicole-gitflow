@@ -1,0 +1,12 @@
+tag 1.0.0
+Tagger: Nicole <nicole@example.com>
+Date:   Thu Aug 27 15:53:43 2026 +0000
+
+Versión 1.0.0
+
+commit dc895b892f31165654426c11986ffb872ba532fa
+Merge: 14397e9 6088ebd
+Author: Nicole <nicole@example.com>
+Date:   Thu Aug 27 15:53:43 2026 +0000
+
+    release: publicar versión 1.0.0

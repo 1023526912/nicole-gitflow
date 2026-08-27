@@ -1,0 +1,1 @@
+Versión 1.1.0: entrega final con diseño pastel y evidencias completas de GitFlow.

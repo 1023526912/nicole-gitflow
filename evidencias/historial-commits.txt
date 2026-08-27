@@ -1,0 +1,21 @@
+d462b34 docs: actualizar evidencias finales del flujo GitFlow
+451826d docs: agregar evidencias y defensa técnica
+2e4bf11 fix: resolver conflicto de integración en README
+79ddfa6 docs: actualizar descripción del proyecto versión A
+de997a0 docs: actualizar descripción del proyecto versión B
+d806b3c merge: integrar descripción A
+34cade9 feat: documentar creación de productos
+6e3c800 feat: documentar edición de productos
+5935da6 feat: documentar eliminación de productos
+02b0be2 feat: documentar listado de productos
+c9b7972 fix: validar precio y stock no negativos
+6e9d3d9 hotfix: publicar corrección 1.0.1
+6088ebd docs: preparar versión 1.0.0
+dc895b8 release: publicar versión 1.0.0
+0248403 merge: integrar hotfix/1.0.1 en develop
+0644100 merge: integrar feature/listar-productos en develop
+f72d932 merge: integrar feature/editar-productos en develop
+36fca60 merge: integrar feature/crear-productos en develop
+5aeabc3 merge: integrar feature/eliminar-productos en develop
+27b8d4f merge: devolver release/1.0.0 a develop
+14397e9 chore: estructura inicial de Nicole Bloom

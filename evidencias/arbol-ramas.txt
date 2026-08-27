@@ -1,0 +1,46 @@
+* d462b34 (HEAD -> release/1.1.0, develop) docs: actualizar evidencias finales del flujo GitFlow
+* 451826d docs: agregar evidencias y defensa técnica
+*   2e4bf11 fix: resolver conflicto de integración en README
+|\  
+| * de997a0 (feature/descripcion-b) docs: actualizar descripción del proyecto versión B
+* |   d806b3c merge: integrar descripción A
+|\ \  
+| |/  
+|/|   
+| * 79ddfa6 (feature/descripcion-a) docs: actualizar descripción del proyecto versión A
+|/  
+*   0248403 merge: integrar hotfix/1.0.1 en develop
+|\  
+* \   27b8d4f merge: devolver release/1.0.0 a develop
+|\ \  
+| | | *   6e9d3d9 (tag: 1.0.1, main) hotfix: publicar corrección 1.0.1
+| | | |\  
+| | | |/  
+| | |/|   
+| | * | c9b7972 (hotfix/1.0.1) fix: validar precio y stock no negativos
+| | |/  
+| | *   dc895b8 (tag: 1.0.0) release: publicar versión 1.0.0
+| | |\  
+| | |/  
+| |/|   
+| * | 6088ebd (release/1.0.0) docs: preparar versión 1.0.0
+|/ /  
+* |   5aeabc3 merge: integrar feature/eliminar-productos en develop
+|\ \  
+| * | 5935da6 (feature/eliminar-productos) feat: documentar eliminación de productos
+|/ /  
+* |   f72d932 merge: integrar feature/editar-productos en develop
+|\ \  
+| * | 6e3c800 (feature/editar-productos) feat: documentar edición de productos
+|/ /  
+* |   0644100 merge: integrar feature/listar-productos en develop
+|\ \  
+| * | 02b0be2 (feature/listar-productos) feat: documentar listado de productos
+|/ /  
+* |   36fca60 merge: integrar feature/crear-productos en develop
+|\ \  
+| |/  
+|/|   
+| * 34cade9 (feature/crear-productos) feat: documentar creación de productos
+|/  
+* 14397e9 chore: estructura inicial de Nicole Bloom

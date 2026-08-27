@@ -1,0 +1,12 @@
+tag 1.0.1
+Tagger: Nicole <nicole@example.com>
+Date:   Thu Aug 27 15:53:43 2026 +0000
+
+Versión 1.0.1
+
+commit 6e9d3d94b83811f21183ff173f6c41f605f60e3a
+Merge: dc895b8 c9b7972
+Author: Nicole <nicole@example.com>
+Date:   Thu Aug 27 15:53:43 2026 +0000
+
+    hotfix: publicar corrección 1.0.1
