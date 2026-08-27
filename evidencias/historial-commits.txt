@@ -1,3 +1,4 @@
+d462b34 docs: actualizar evidencias finales del flujo GitFlow
 451826d docs: agregar evidencias y defensa técnica
 2e4bf11 fix: resolver conflicto de integración en README
 79ddfa6 docs: actualizar descripción del proyecto versión A
