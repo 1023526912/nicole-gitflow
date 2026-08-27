@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto web de Nicole para práctica de Git Flow">
+    <title>Nicole | Mi espacio creativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="hero">
+            <span class="badge">Proyecto Git Flow 🌸</span>
+            <h1>Hola, soy Nicole</h1>
+            <p class="hero-copy">Este es mi espacio de práctica para aprender desarrollo web, organizar cambios con Git Flow y crear cosas bonitas con código.</p>
+            <button id="btnClick" type="button">Descubrir mensaje</button>
+            <p id="output" class="message" aria-live="polite"></p>
+        </section>
+
+        <section class="cards" aria-label="Temas del proyecto">
+            <article class="card">
+                <span class="icon">💻</span>
+                <h2>Desarrollo Web</h2>
+                <p>HTML, CSS y JavaScript para construir experiencias sencillas y agradables.</p>
+            </article>
+            <article class="card">
+                <span class="icon">🌷</span>
+                <h2>Diseño Pastel</h2>
+                <p>Una interfaz suave con tonos rosados, lilas y crema.</p>
+            </article>
+            <article class="card">
+                <span class="icon">🌿</span>
+                <h2>Git Flow</h2>
+                <p>Ramas feature, develop, release y hotfix para trabajar de forma organizada.</p>
+            </article>
+        </section>
+
+        <section class="contact-card">
+            <div>
+                <span class="eyebrow">Contacto</span>
+                <h2>Déjame un saludo</h2>
+                <p>Completa los datos y prueba la interacción del formulario.</p>
+            </div>
+            <form id="contactForm">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+
+                <label for="favorite">Color pastel favorito</label>
+                <select id="favorite" name="favorite">
+                    <option value="Rosado">Rosado</option>
+                    <option value="Lila">Lila</option>
+                    <option value="Crema">Crema</option>
+                    <option value="Menta">Menta</option>
+                </select>
+
+                <input type="submit" value="Enviar saludo">
+            </form>
+            <p id="formOutput" class="form-output" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer>Hecho con ♡ por Nicole · Práctica Git Flow</footer>
+    <script src="app.js"></script>
+</body>
+</html>
